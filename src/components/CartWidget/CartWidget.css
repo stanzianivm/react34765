@@ -1,0 +1,17 @@
+.cart-icon-button{
+    margin-right: 15px;
+}
+
+.icon-cart{
+    color: white !important;
+    margin-right: -8px !important;
+}
+
+.icon-total{
+    /* position: absolute; */
+    transform: scale(.7);
+    transform-origin: top right;
+    right: 0.25rem;
+    margin-top: -0.25rem;
+}
+

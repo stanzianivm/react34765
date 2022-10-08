@@ -1,0 +1,47 @@
+.count-container{
+    flex-direction: column;
+}
+
+.center{
+    width: 95%;
+    margin: 15px 0px;
+    flex-direction: initial;
+    display: block;
+    column-gap: 18px;
+    flex-direction: column;
+}
+
+.div-count{
+    width: 50% !important;
+}
+
+.count-warning{
+    /* margin-bottom: 15px;
+    padding-top: 9px !important; */
+    color: red
+}
+
+.input-total{
+    text-align: center;
+}
+
+.count-btn-add{
+    margin-bottom: 20px;
+    margin-right: 35px;
+    float: right;
+}
+
+@media screen and (min-width: 768px) {
+    .center{
+        column-gap: 25px;
+    }
+
+    .div-count{
+        width: 24% !important;
+    }
+
+    .count-btn-add{
+        margin-right: 60px;
+    }
+
+}

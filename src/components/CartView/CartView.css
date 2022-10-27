@@ -1,0 +1,138 @@
+.item-cart-container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+}
+
+.cart-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 50px  20px;
+    background-color: white;
+    flex-direction: column;
+}
+
+.cart-info {
+    overflow: hidden;
+}
+
+.cart-img{
+    margin-left: 15%;
+}
+
+.cart-details-img{
+    position: relative;
+    display: flex;
+    max-width: 250px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+.cart-details {
+    margin-top: 57px;
+    margin-left: 40px;
+}
+
+.item {
+    float: left;
+}
+
+.cart-line{
+    margin: 0px 55px;
+}
+
+.cart-btn-eliminar-div{
+    margin-bottom: 20px;
+}
+
+.cart-btn-eliminar{
+    text-decoration: none;
+}
+
+.cart-details-btn{
+    text-decoration: none;
+    color: black;
+}
+
+.cart-details-btn :hover{
+    text-decoration: none;
+    color: black;
+}
+
+.cart-details-summary-container{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin: 25px 0px;
+    flex-direction: column;
+}
+
+.cart-details-summary-info{
+    display: grid;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 93px;
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.cart-details-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-details-summary-btn{
+    margin-top: 30px;
+    /* margin-left: 30px; */
+}
+
+h1{
+    width: 90%;
+    text-align: center;
+}
+
+.cart-details-items-info{
+    margin: 25px 25px;
+    text-align: left;
+}
+
+.cart-btn-clean{
+    padding: 6px 30px !important;
+}
+
+@media screen and (min-width: 768px) {
+    .cart-container{
+        margin: 50px 170px;
+    }
+
+    .cart-img{
+        margin-left: 53px;
+    }
+
+    .cart-details-summary-info{
+        margin-right: 65px;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+    .cart-details-summary{
+        flex-direction: row;
+        justify-content: end;
+        margin-right: 52px;
+        column-gap: 20px;
+    }
+
+    h1{
+        width: 100%;
+    }
+
+    .cart-details-items-info{
+        margin: 25px 0px;
+        text-align: left;
+    }
+}

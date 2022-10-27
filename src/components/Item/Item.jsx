@@ -17,6 +17,11 @@ export const Item = (props) => {
       <div className="card-detail">
         <h5>{props.title}</h5>
         <p>${props.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}</p>
+        {props.stock === 0 ? (
+          <span className="badge rounded-pill text-bg-danger">
+            No hay stock disponible
+          </span>
+        ) : null}
       </div>
     </Link>
   );

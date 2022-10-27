@@ -12,6 +12,7 @@ export const ItemList = (props) => {
             title={producto.title}
             img={producto.img}
             price={producto.price}
+            stock={producto.stock}
           />
         );
       })}

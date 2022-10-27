@@ -1,17 +1,18 @@
-import React from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Cart } from "react-bootstrap-icons";
+import { cartContext } from "../../context/cartContext";
+import { Link } from "react-router-dom";
 import "../NavBar/NavBar.css";
 
-export const CartWidget = (props) => {
-  const [total, setTotal] = useState(0);
+export const CartWidget = () => {
+  const { getTotalItemCount } = useContext(cartContext);
 
   return (
-    <a className="cart-icon-button" role="button" href="#">
+    <Link to="/cart" className="cart-icon-button" role="button">
       <Cart className="icon-cart" />
       <span className="badge rounded-pill badge-counter bg-danger icon-total">
-        {total}
+        {getTotalItemCount()}
       </span>
-    </a>
+    </Link>
   );
 };

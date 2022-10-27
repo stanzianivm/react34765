@@ -33,7 +33,7 @@ export const NavBar = () => {
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle navBar-button-menu"
-                href="#"
+                cursor="pointer"
                 id="navbarDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
@@ -42,11 +42,6 @@ export const NavBar = () => {
                 Categorias
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                {/* <li>
-                  <a className="dropdown-item navBar-button-menu" href="#">
-                    Computación
-                  </a>
-                </li> */}
                 <li>
                   <Link
                     to="/categoria/celulares"

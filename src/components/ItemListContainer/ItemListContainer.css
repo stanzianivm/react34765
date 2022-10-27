@@ -7,6 +7,7 @@
 
 .container {
     margin-top: 20px;
+    padding-bottom: 25px;
 }
 
 .card-container {
@@ -30,6 +31,9 @@
     font-size: 15px;
     font-weight: normal;
     line-height: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
@@ -40,7 +44,7 @@
     }
 
     .card-container {
-        justify-content: space-between;
+        /* justify-content: space-between; */
         width: 30%;
     }
 }

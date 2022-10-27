@@ -1,0 +1,15 @@
+.breadcrumb-home {
+    color: #999;
+    /* color: rgba(0,0,0,.9); */
+    text-decoration: none;
+    margin-right: 5px;
+  }
+
+  .breadcrumb-home:hover{
+    color: #666;
+  }
+
+  .breadcrumb-category{
+    text-decoration: none;
+    margin-left: 5px;
+  }

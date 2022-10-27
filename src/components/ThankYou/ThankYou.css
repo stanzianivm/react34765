@@ -1,0 +1,57 @@
+.thankyou-container{
+    position: relative;
+    display: column;
+    flex-direction: row;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.thankyou-userdata-container{
+    position: relative;
+    display: flex;
+    width: 95%;
+    margin: 30px  auto;
+    background-color: white;
+    flex-direction: column;
+}
+
+.thankyou-title{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.thankyou-userdata-span{
+    flex-direction: column;
+    display: flex;
+    padding: 20px;
+}
+
+.thankyou-userdata-items{
+    position: relative;
+    display: flex;
+    width: 95%;
+    margin: 30px  auto;
+    background-color: white;
+    flex-direction: column;
+}
+
+.thanyou-payment{
+    padding: 20px;
+}
+
+.thankyou-btn{
+    justify-content: right;
+    display: flex;
+    margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .thankyou-container{
+        margin: 50px 0px;
+    }
+
+    .thankyou-btn{
+        margin-right: 40px;
+    }
+}

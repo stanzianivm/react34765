@@ -42,7 +42,14 @@ export const ItemDetails = (props) => {
               .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
           </p>
           <hr className="details-line" />
-          {props.producto.stock > 0 && !isInCart(props.producto.id) ? (
+          {props.producto.stock === 0 ? (
+            <div
+              className="alert alert-danger item-details-warning"
+              role="alert"
+            >
+              No hay stock disponible
+            </div>
+          ) : props.producto.stock > 0 && !isInCart(props.producto.id) ? (
             <ItemCount
               onAddToCart={handleAddToCart}
               stock={props.producto.stock}

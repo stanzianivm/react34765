@@ -42,3 +42,7 @@ Para clonar y correr el proyecto necesitás tener instalado "Git" y "Node.js". D
 - "sweetalert2": "^11.6.1",
 - "web-vitals": "^2.1.4",
 - "webpack": "^5.74.0"
+
+# Link Netlify
+
+- https://react34765stanziani.netlify.app/

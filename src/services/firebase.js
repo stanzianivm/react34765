@@ -26,12 +26,12 @@ const db = getFirestore(FirebaseApp);
 
 export async function getProductos() {
   const collectionRef = await getDocs(collection(db, "productos"));
-
-  let dataProuduct = collectionRef.docs.map((element) => {
+  let dataProuducts = collectionRef.docs.map((element) => {
     return { id: element.id, ...element.data() };
   });
 
-  return dataProuduct;
+  dataProuducts.sort((a, b) => b.stock - a.stock);
+  return dataProuducts;
 }
 
 export async function getProducto(productoId) {
@@ -63,6 +63,7 @@ export async function getProductosByCategory(categoriaId) {
     });
 
     if (dataProuducts.length > 0) {
+      dataProuducts.sort((a, b) => b.stock - a.stock);
       return dataProuducts;
     } else {
       throw new Error("No existen productos para la categoría seleccionada!");

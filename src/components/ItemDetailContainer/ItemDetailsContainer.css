@@ -60,9 +60,9 @@
 }
 
 .details-price{
-    font-weight: bold;
     font-size: 25px;
-    font-family: cursive;
+    font-size: 25px;
+    margin-top: 15px;
 }
 
 .details-line{

@@ -19,7 +19,7 @@ export const ThankYou = () => {
       addToPurchaseDetail(item);
       setIsLoading(false);
     });
-  }, []);
+  });
 
   return (
     <>
@@ -31,7 +31,6 @@ export const ThankYou = () => {
             <h1>Detalle de la compra</h1>
             <p>ID de la compra: {detailPurchase.id}</p>
           </div>
-
           <div className="thankyou-userdata-container">
             <div className="thankyou-userdata-span">
               <span>Nombre: {detailPurchase.buyerData.name}</span>

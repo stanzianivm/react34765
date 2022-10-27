@@ -1,4 +1,4 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
 import { ItemDetailsDescription } from "./ItemDetailsDescription";
 import { cartContext } from "../../context/cartContext";
@@ -8,20 +8,11 @@ import { Breadcrumb } from "../Breadcrumb/Breadcrumb";
 const prodImage = require.context("../../images", true);
 
 export const ItemDetails = (props) => {
-  const [count, setCount] = useState(0);
-  const [exist, setExist] = useState(false);
-
   const { addToCart, isInCart } = useContext(cartContext);
 
   const handleAddToCart = (count) => {
     addToCart(props.producto, count);
-    setCount(count);
   };
-
-  useEffect(() => {
-    let ok = isInCart(props.producto.id);
-    setExist(ok);
-  }, [count]);
 
   return (
     <>
@@ -51,7 +42,7 @@ export const ItemDetails = (props) => {
               .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
           </p>
           <hr className="details-line" />
-          {count === 0 && !exist ? (
+          {props.producto.stock > 0 && !isInCart(props.producto.id) ? (
             <ItemCount
               onAddToCart={handleAddToCart}
               stock={props.producto.stock}
@@ -66,11 +57,11 @@ export const ItemDetails = (props) => {
               >
                 El producto se encuentra en el carrito
               </div>
-              <Link to="/cart" className="item-details-show-cart-btn">
-                <button type="button" className="btn btn-primary">
+              <div className="item-details-show-cart-btn">
+                <Link to="/cart" className=" btn btn-primary">
                   Ver carrito
-                </button>
-              </Link>
+                </Link>
+              </div>
             </>
           )}
         </div>

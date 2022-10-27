@@ -37,9 +37,15 @@ export const CartDetails = () => {
                     <h1>{producto.title}</h1>
                   </Link>
                   <div className="cart-details-items-info">
+                    <p>
+                      Precio por unidad:{" "}
+                      {producto.price
+                        .toString()
+                        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                    </p>
                     <p>Cantidad: {producto.count}</p>
                     <p>
-                      $
+                      Precio total: $
                       {(producto.price * producto.count)
                         .toString()
                         .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}

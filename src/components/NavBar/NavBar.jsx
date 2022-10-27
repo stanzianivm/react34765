@@ -31,7 +31,7 @@ export const NavBar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item dropdown">
-              <a
+              <Link
                 className="nav-link dropdown-toggle navBar-button-menu"
                 cursor="pointer"
                 id="navbarDropdown"
@@ -40,7 +40,7 @@ export const NavBar = () => {
                 aria-expanded="false"
               >
                 Categorias
-              </a>
+              </Link>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>
                   <Link
